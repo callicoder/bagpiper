@@ -44,6 +44,8 @@ class User(AbstractBaseUser):
 	last_name = models.CharField(max_length=40, blank=True)
 
 	ref_code = models.CharField(max_length=255, blank=True)
+	ref_bonus = models.IntegerField(default=0)
+	
 	is_admin = models.BooleanField(default=False)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)

@@ -19,6 +19,7 @@ from rest_framework_nested import routers
 from bagpiper.views import IndexView
 from users.views import UserViewSet, LoginView, LogoutView
 from coupons.views import CouponViewSet
+from referral import views
 
 router = routers.SimpleRouter()
 router.register(r'users', UserViewSet)
@@ -31,5 +32,6 @@ urlpatterns = [
     url(r'^api/', include(users_router.urls)),
     url(r'^api/auth/login/$', LoginView.as_view(), name='login'),
 	url(r'^api/auth/logout/$', LogoutView.as_view(), name='logout'),
+    url(r'^api/referral/(?P<pk>[0-9A-Z]+)/verify/$', views.verify_referral),
 	url('^.*$', IndexView.as_view(), name='index'),
 ]
