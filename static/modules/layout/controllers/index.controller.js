@@ -31,10 +31,10 @@
 
     vm.verifyReferral = function() {
       Referral.verify(vm.refcode)
-      .then(function(){
-        console.log('Success')
+      .then(function(response){
+        Snackbar.show(response.data.message);
       }, function(){
-        console.log('Failed')
+        Snackbar.error(response.data);
       });
     };
 

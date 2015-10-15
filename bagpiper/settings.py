@@ -25,7 +25,7 @@ SECRET_KEY = '$9r!$bzo585^l-5v+x3o!x(g_u7d@55@_)&91vffe**7&9)qjw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,3 +120,6 @@ STATICFILES_FINDERS = (
 COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
 AUTH_USER_MODEL = 'users.User'
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
