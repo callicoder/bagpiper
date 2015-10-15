@@ -1,0 +1,42 @@
+{% load compress %}
+{% load staticfiles %}
+
+{% compress js %}
+<script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/bootstrap-material-design/dist/js/material.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/bootstrap-material-design/dist/js/ripples.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/underscore/underscore.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular-bootstrap/ui-bootstrap-tpls.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular-cookies/angular-cookies.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'bower_components/ngDialog/js/ngDialog.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/snackbarjs/snackbar.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'modules/bagpiper.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/bagpiper.config.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/bagpiper.routes.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/authentication/authentication.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/authentication/services/authentication.service.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/authentication/controllers/register.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/authentication/controllers/login.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/layout/layout.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/layout/controllers/navbar.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/utils/utils.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/utils/services/snackbar.service.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/layout/controllers/index.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/profiles/profile.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/profiles/services/profile.service.js' %}"></script>
+<script type="text/javascript" src="{% static 'modules/profiles/controllers/profile.controller.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'modules/coupons/coupons.module.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'modules/coupons/services/coupons.service.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'modules/coupons/controllers/coupons.controller.js' %}"></script>
+
+
+{% endcompress %}
