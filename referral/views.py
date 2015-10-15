@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.db import transaction
 from rest_framework.decorators import api_view
 from users.models import User
 from referral.models import Referral
@@ -7,6 +8,7 @@ from referral.constants import *
 # Create your views here.
 
 @api_view()
+@transaction.atomic
 def verify_referral(request, pk):
 
 	try: 
