@@ -8,17 +8,6 @@
   CouponsController.$inject = ['$scope'];
 
   function CouponsController($scope) {
-    var vm = this;
-
-    vm.columns = [];
-
-    activate();
-
-
-    function activate() {
-      $scope.$watchCollection(function () { return $scope.posts; }, render);
-    //  $scope.$watch(function () { return $(window).width(); }, render);
-    }
-    
+    var vm = this;    
   }
 })();

@@ -10,6 +10,7 @@
 		'bagpiper.utils',
 		'bagpiper.profiles',
 		'bagpiper.coupons',
+		'bagpiper.referral',
 		'ui.bootstrap'
 	])
 	.run(run);

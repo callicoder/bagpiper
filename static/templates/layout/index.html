@@ -1,1 +1,12 @@
-<div ng-include="'/static/templates/coupons/coupons.html'"></div>
+<div class="col-md-6 col-sm-12">
+	<div class="well">
+		<h2>Coupons</h2>
+		<div ng-include="'/static/templates/coupons/coupons.html'"></div>
+	</div>	
+</div>
+<div class="col-md-6 col-sm-12" ng-show="vm.isAuthenticated">
+	<div class="well">
+		<h2>Referral</h2>
+		<div ng-include="'/static/templates/referral/referral.html'"></div>
+	</div>	
+</div>

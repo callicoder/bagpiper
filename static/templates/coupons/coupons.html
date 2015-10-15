@@ -3,3 +3,6 @@
 	<p>Description: {{coupon.description}}</p>
 	<p>Valid Till: {{coupon.valid_till}}</p>
 </div>
+<p style="text-align:center" ng-if="vm.coupons.length == 0">
+	No Coupons Available
+</p>
