@@ -1,5 +1,4 @@
 from django.db import models
-from coupons.constants import *
 
 # Create your models here.
 
