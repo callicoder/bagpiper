@@ -21,6 +21,9 @@ def verify_referral(request, pk):
 	if referrer_user.username == referee_user.username:
 		return Response({'success': False, 'message': 'Invalid referral code'})
 
+	if Referral.objects.filter(referee=referee_user).exists():
+		return Response({'success': False, 'message': 'You have already used a referral code'})		
+
 	referrer_user.ref_bonus += 	referrer_bonus
 	referee_user.ref_bonus += referee_bonus
 
